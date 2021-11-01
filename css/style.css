@@ -1,0 +1,3945 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.mobile {
+  background-color: black;
+  height: 10vh;
+}
+
+.mobile .hamburger {
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  position: relative;
+  padding-top: 10px;
+}
+
+.mobile .logo {
+  position: absolute;
+  top: -1%;
+  width: 50%;
+  left: 40%;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #BBE1FA;
+  margin: 5px 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  -webkit-transform: rotate(-45deg) translate(-2px, 8px);
+          transform: rotate(-45deg) translate(-2px, 8px);
+}
+
+.hamburger.is-active:after {
+  -webkit-transform: rotate(45deg) translate(-3px, -10px);
+          transform: rotate(45deg) translate(-3px, -10px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+  overflow: hidden;
+}
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 10;
+  right: 100%;
+  width: 100%;
+  min-height: 30vh;
+  z-index: 98;
+  background-color: #BBE1FA;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mobile-nav ul {
+  text-align: center;
+}
+
+.mobile-nav ul #header-btn {
+  margin: 10px;
+  background-color: #0F4C75;
+  width: 200px;
+  height: 60px;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.mobile-nav ul li a {
+  display: block;
+  text-align: center;
+  color: #000;
+  margin-bottom: 10px;
+  margin-top: 24px;
+  padding: 5 px;
+  background-color: #BBE1FA;
+  font-size: 20px;
+}
+
+.mobile-nav ul li a:hover {
+  background-color: #BBE1FA;
+}
+
+.mobile-nav.is-active {
+  right: 0;
+  overflow: hidden;
+}
+
+header {
+  display: none;
+}
+
+header .logo {
+  margin-left: 30px;
+  display: none;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+}
+
+header ul li {
+  padding-top: 10px;
+}
+
+header ul li a {
+  margin-left: 20px;
+  color: white;
+  font-size: 15px;
+}
+
+header .header-btn {
+  display: none;
+  margin: 10px;
+  background-color: #0F4C75;
+  width: 100px;
+  height: 60px;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.banner {
+  background-color: #1A171E;
+  height: 50vh;
+  width: 100%;
+}
+
+.banner .banner-text {
+  color: white;
+  margin-top: 10px;
+}
+
+.banner .banner-text h1 {
+  font-size: 25px;
+}
+
+.banner .banner-text .banner-btn {
+  margin: 5px;
+  background-color: #0F4C75;
+  width: 150px;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.banner .banner-images {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.banner .banner-images img {
+  width: 25%;
+  padding-left: 2px;
+  padding-bottom: 5px;
+}
+
+.About {
+  background-color: black;
+}
+
+.About .about-image {
+  padding-top: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.About .about-image img {
+  width: 100%;
+}
+
+.About .rectangle {
+  display: none;
+  background-color: #0F0F0F;
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  left: 68%;
+  top: 30%;
+}
+
+.About .about-text {
+  padding-top: 40px;
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+.About .about-text h2 {
+  font-size: 25px;
+  color: #BBE1FA;
+  padding-left: 5px;
+}
+
+.About .about-text p {
+  font-size: 20px;
+  color: white;
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+
+.About .about-text .rectangle2 {
+  display: none;
+  background-color: #0F0F0F;
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  right: -25%;
+  top: 50%;
+}
+
+.About .about-text .about-btn {
+  margin: 10px;
+  background-color: #0F4C75;
+  width: 200px;
+  height: 60px;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.How-it-works {
+  background-color: black;
+  padding-top: 50px;
+}
+
+.How-it-works .text {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.How-it-works .works1 {
+  background-color: #0F0F0F;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  height: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.How-it-works .works1 h2 {
+  font-size: 25px;
+  color: #3282B8;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.How-it-works .works1 p {
+  font-size: 20px;
+  color: white;
+  padding-right: 20px;
+}
+
+.How-it-works .works2 {
+  background-color: #0F0F0F;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  height: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.How-it-works .works2 h2 {
+  font-size: 25px;
+  color: #BBE1FA;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.How-it-works .works2 p {
+  font-size: 20px;
+  color: white;
+  padding-right: 20px;
+}
+
+.showcase {
+  background-color: black;
+}
+
+.showcase h2 {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding-top: 50px;
+}
+
+.showcase .clients {
+  display: none;
+  text-align: center;
+}
+
+.showcase .clients button {
+  background-color: black;
+  border: none;
+  outline: none;
+}
+
+.showcase #profile1 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile1 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile1 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile1 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 10px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile1 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile1 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile1 p {
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile2 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile2 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile2 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile2 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile2 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile2 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile2 p {
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile3 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile3 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile3 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile3 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile3 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile3 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile3 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile4 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile4 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile4 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile4 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile4 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile4 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile4 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile5 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile5 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile5 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile5 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile5 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile5 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile5 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile6 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile6 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile6 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile6 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile6 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile6 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile6 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile7 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile7 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile7 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile7 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile7 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile7 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile7 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile8 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile8 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile8 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile8 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile8 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile8 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile8 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile9 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile9 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile9 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile9 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile9 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile9 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile9 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.showcase #profile10 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile10 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile10 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile10 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 30px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 100px;
+  color: #BBE1FA;
+}
+
+.showcase #profile10 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile10 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile10 p {
+  white-space: pre-line;
+  font-size: 25px;
+  color: white;
+}
+
+.showcase #profile11 .image {
+  padding-top: 30px;
+}
+
+.showcase #profile11 .image img {
+  width: 95%;
+  height: 95%;
+}
+
+.showcase #profile11 .exe-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showcase #profile11 .exe-text h3 {
+  white-space: pre-line;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-right: 1px;
+  color: #BBE1FA;
+}
+
+.showcase #profile11 .exe-text .cellc {
+  width: 25%;
+  height: 25%;
+}
+
+.showcase #profile11 .exe-text .cellc img {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase #profile11 p {
+  white-space: pre-line;
+  font-size: 20px;
+  color: white;
+}
+
+.Contact-us {
+  background-color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.Contact-us .contact h3 {
+  font-size: 23px;
+  color: #BBE1FA;
+}
+
+.Contact-us .contact h2 {
+  font-size: 25px;
+  color: white;
+}
+
+.Contact-us .contact p {
+  font-size: 25px;
+  color: #BBE1FA;
+}
+
+.Contact-us .contact .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+  padding-top: 50px;
+}
+
+.Contact-us .contact .phone i {
+  color: #BBE1FA;
+  font-size: 25px;
+  padding-right: 20px;
+}
+
+.Contact-us .contact .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.Contact-us .contact .email i {
+  color: #BBE1FA;
+  font-size: 25px;
+  padding-right: 20px;
+}
+
+.Contact-us .contact .linkedin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.Contact-us .contact .linkedin i {
+  color: #BBE1FA;
+  font-size: 25px;
+  padding-right: 20px;
+}
+
+.Contact-us .fill {
+  background-color: #0F0F0F;
+  padding: 40px 40px 40px 40px;
+}
+
+.Contact-us .fill form #name {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: #2B2B2B;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+
+.Contact-us .fill form #name::-webkit-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #name:-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #name::-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #name::placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #email {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: #2B2B2B;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.Contact-us .fill form #email::-webkit-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #email:-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #email::-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #email::placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #subject {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: #2B2B2B;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+
+.Contact-us .fill form #subject::-webkit-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #subject:-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #subject::-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #subject::placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #message {
+  width: 100%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background-color: #2B2B2B;
+  outline: none;
+  border: none;
+}
+
+.Contact-us .fill form #message::-webkit-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #message:-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #message::-ms-input-placeholder {
+  color: white;
+}
+
+.Contact-us .fill form #message::placeholder {
+  color: white;
+}
+
+.Contact-us .fill form .form-btn {
+  width: 100%;
+  background-color: #0F4C75;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.Mailing-list {
+  background-color: black;
+  padding-bottom: 200px;
+  position: relative;
+}
+
+.Mailing-list .list {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #0F0F0F;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Mailing-list .list .mailing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.Mailing-list .list .mailing .circle {
+  background-color: #3282B8;
+  width: 90px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.Mailing-list .list .mailing i {
+  position: absolue;
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 23%;
+  left: 5%;
+  font-size: 30px;
+}
+
+.Mailing-list .list .mailing p {
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.Mailing-list .list .mailing p span {
+  display: block;
+}
+
+.Mailing-list .list .subscribe form #Your-email {
+  width: 100%;
+  height: 80px;
+  background-color: #2B2B2B;
+  position: relative;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.Mailing-list .list .subscribe form #sub-btn {
+  width: 40%;
+  background-color: #0F4C75;
+  height: 65px;
+  color: white;
+  font-size: 25px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  position: absolute;
+  left: 50%;
+  top: 7%;
+}
+
+footer {
+  background-color: #171717;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+footer .list {
+  position: absolute;
+  background-color: #0F0F0F;
+  margin-right: 40px;
+  margin-left: 15px;
+  padding-top: 10px;
+  top: -15%;
+  width: 90%;
+}
+
+footer .list p {
+  font-size: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 10px;
+}
+
+footer .list #old-mutual {
+  width: 80%;
+  padding-top: 10px;
+}
+
+footer .list #old-mutual img {
+  width: 108%;
+}
+
+footer .list #toyota {
+  width: 80%;
+}
+
+footer .list #toyota img {
+  width: 100%;
+}
+
+footer .list #nestle {
+  width: 40% img;
+  width-width: 100%;
+}
+
+footer .list #cell {
+  width: 40% img;
+  width-width: 100%;
+}
+
+footer .contacts h2 {
+  padding-top: 630px;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+footer .contacts .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .contacts .links ul li {
+  width: 100%;
+  text-align: center;
+}
+
+footer .contacts .links ul li a {
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+footer .contacts .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 25px;
+  padding-top: 30px;
+  color: white;
+}
+
+footer .contacts .details #number {
+  position: relative;
+}
+
+footer .contacts .details #number:before {
+  position: absolute;
+  content: "";
+  display: none;
+  width: 2px;
+  height: 80px;
+  background-color: grey;
+  right: -50%;
+  top: -50%;
+}
+
+footer .contacts .details #help {
+  position: relative;
+}
+
+footer .contacts .details #help:before {
+  position: absolute;
+  content: "";
+  display: none;
+  width: 2px;
+  height: 80px;
+  background-color: grey;
+  right: -50%;
+  top: -50%;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  header {
+    display: block;
+    background-color: black;
+    height: 10vh;
+  }
+  header .logo {
+    margin-left: 5px;
+    display: block;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header ul li {
+    padding-top: 20px;
+  }
+  header ul li a {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  header .header-btn {
+    display: block;
+    margin: 5px;
+    background-color: #0F4C75;
+    width: 110px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .banner {
+    background-color: #1A171E;
+    height: 45vh;
+    width: 100%;
+  }
+  .banner .banner-text {
+    color: white;
+    margin-top: 150px;
+  }
+  .banner .banner-text h1 {
+    font-size: 30px;
+  }
+  .banner .banner-text .banner-btn {
+    margin: 5px;
+    background-color: #0F4C75;
+    width: 200px;
+    height: 80px;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .banner .banner-images {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner .banner-images img {
+    width: 50%;
+    padding-left: 2px;
+    padding-bottom: 5px;
+  }
+  .About {
+    background-color: black;
+  }
+  .About .about-image {
+    padding-top: 50px;
+    width: 80%;
+    position: relative;
+  }
+  .About .about-image img {
+    width: 100%;
+  }
+  .About .rectangle {
+    background-color: #0F0F0F;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    left: 68%;
+    top: 30%;
+  }
+  .About .about-text {
+    padding-top: 40px;
+    width: 100%;
+    position: relative;
+    color: white;
+  }
+  .About .about-text h2 {
+    font-size: 25px;
+    color: #BBE1FA;
+    padding-left: 5px;
+  }
+  .About .about-text p {
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 5px;
+  }
+  .About .about-text .rectangle2 {
+    display: none;
+    background-color: #0F0F0F;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    right: -25%;
+    top: 50%;
+  }
+  .About .about-text .about-btn {
+    margin: 10px;
+    background-color: #0F4C75;
+    width: 200px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .How-it-works {
+    background-color: black;
+    padding-top: 50px;
+  }
+  .How-it-works .text {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding-bottom: 10px;
+  }
+  .How-it-works .works1 {
+    background-color: #0F0F0F;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .How-it-works .works1 h2 {
+    font-size: 30px;
+    color: #3282B8;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .How-it-works .works1 p {
+    font-size: 25px;
+    color: white;
+    padding-right: 20px;
+  }
+  .How-it-works .works2 {
+    background-color: #0F0F0F;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .How-it-works .works2 h2 {
+    font-size: 30px;
+    color: #BBE1FA;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .How-it-works .works2 p {
+    font-size: 25px;
+    color: white;
+    padding-right: 20px;
+  }
+  .showcase {
+    background-color: black;
+  }
+  .showcase h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-top: 50px;
+  }
+  .showcase .clients {
+    display: block;
+    text-align: center;
+  }
+  .showcase .clients button {
+    background-color: black;
+    border: none;
+    outline: none;
+  }
+  .showcase #profile1 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile1 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile1 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile1 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 0px;
+    color: #BBE1FA;
+  }
+  .showcase #profile1 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile1 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile1 p {
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile2 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile2 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile2 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile2 .exe-text h3 {
+    font-size: 25px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 10px;
+    color: #BBE1FA;
+  }
+  .showcase #profile2 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile2 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile2 p {
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile3 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile3 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile3 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile3 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile3 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile3 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile3 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile4 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile4 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile4 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile4 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile4 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile4 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile4 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile5 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile5 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile5 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile5 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile5 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile5 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile5 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile6 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile6 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile6 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile6 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile6 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile6 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile6 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile7 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile7 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile7 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile7 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile7 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile7 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile7 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile8 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile8 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile8 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile8 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile8 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile8 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile8 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile9 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile9 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile9 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile9 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile9 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile9 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile9 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile10 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile10 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile10 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile10 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile10 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile10 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile10 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile11 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile11 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile11 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile11 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile11 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile11 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile11 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .Contact-us {
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .Contact-us .contact h3 {
+    font-size: 28px;
+    color: #BBE1FA;
+  }
+  .Contact-us .contact h2 {
+    font-size: 40px;
+    color: white;
+  }
+  .Contact-us .contact p {
+    font-size: 25px;
+    color: #BBE1FA;
+  }
+  .Contact-us .contact .phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 50px;
+  }
+  .Contact-us .contact .phone i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .contact .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .Contact-us .contact .email i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .contact .linkedin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .Contact-us .contact .linkedin i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .fill {
+    background-color: #0F0F0F;
+    padding: 40px 40px 40px 40px;
+  }
+  .Contact-us .fill form #name {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #name::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #email::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #subject::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #message::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form .form-btn {
+    width: 100%;
+    background-color: #0F4C75;
+    height: 60px;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .Mailing-list {
+    background-color: black;
+    padding-bottom: 200px;
+    position: relative;
+  }
+  .Mailing-list .list {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #0F0F0F;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .Mailing-list .list .mailing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .Mailing-list .list .mailing .circle {
+    background-color: #3282B8;
+    width: 70 px;
+    height: 60 px;
+    border-radius: 50%;
+  }
+  .Mailing-list .list .mailing i {
+    position: absolue;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 30px;
+  }
+  .Mailing-list .list .mailing p {
+    color: white;
+    font-size: 25px;
+    padding-left: 10px;
+  }
+  .Mailing-list .list .mailing p span {
+    display: block;
+  }
+  .Mailing-list .list .subscribe form #Your-email {
+    width: 100%;
+    height: 80px;
+    background-color: #2B2B2B;
+    position: relative;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .Mailing-list .list .subscribe form #sub-btn {
+    width: 40%;
+    background-color: #0F4C75;
+    height: 65px;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 7%;
+  }
+  footer {
+    background-color: #171717;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  footer .list {
+    position: absolute;
+    background-color: #0F0F0F;
+    margin-right: 40px;
+    margin-left: 20px;
+    padding-top: 10px;
+    top: -15%;
+    width: 95%;
+  }
+  footer .list p {
+    font-size: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 10px;
+  }
+  footer .list #old-mutual {
+    width: 80%;
+    padding-top: 45px;
+  }
+  footer .list #old-mutual img {
+    width: 100%;
+  }
+  footer .list #toyota {
+    width: 80%;
+  }
+  footer .list #toyota img {
+    width: 100%;
+  }
+  footer .list #nestle {
+    width: 80%;
+  }
+  footer .list #nestle img {
+    width: 100%;
+  }
+  footer .list #cell {
+    width: 80%;
+  }
+  footer .list #cell img {
+    width: 100%;
+  }
+  footer .contacts h2 {
+    padding-top: 200px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 40px;
+  }
+  footer .contacts .links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer .contacts .links ul li {
+    text-align: left;
+    width: 20%;
+  }
+  footer .contacts .links ul li a {
+    font-size: 12ppx;
+    color: white;
+    position: relative;
+    padding-left: 3px;
+  }
+  footer .contacts .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 25px;
+    padding-top: 90px;
+    color: white;
+  }
+  footer .contacts .details #number {
+    position: relative;
+  }
+  footer .contacts .details #number:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 80px;
+    background-color: grey;
+    right: -10%;
+    top: -50%;
+  }
+  footer .contacts .details #help {
+    position: relative;
+  }
+  footer .contacts .details #help:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 80px;
+    background-color: grey;
+    right: -10%;
+    top: -50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  header {
+    display: block;
+    background-color: black;
+    height: 10vh;
+  }
+  header .logo {
+    margin-left: 5px;
+    display: block;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header ul li {
+    padding-top: 20px;
+  }
+  header ul li a {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  header .header-btn {
+    display: block;
+    margin: 5px;
+    background-color: #0F4C75;
+    width: 110px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .banner {
+    background-color: #1A171E;
+    height: 45vh;
+    width: 100%;
+  }
+  .banner .banner-text {
+    color: white;
+    margin-top: 150px;
+  }
+  .banner .banner-text h1 {
+    font-size: 40px;
+  }
+  .banner .banner-text .banner-btn {
+    margin: 5px;
+    background-color: #0F4C75;
+    width: 200px;
+    height: 80px;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .banner .banner-images {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner .banner-images img {
+    width: 50%;
+    padding-left: 2px;
+    padding-bottom: 5px;
+  }
+  .About {
+    background-color: black;
+  }
+  .About .about-image {
+    padding-top: 50px;
+    width: 80%;
+    position: relative;
+  }
+  .About .about-image img {
+    width: 100%;
+  }
+  .About .rectangle {
+    background-color: #0F0F0F;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    left: 68%;
+    top: 30%;
+  }
+  .About .about-text {
+    padding-top: 70px;
+    width: 100%;
+    position: relative;
+    color: white;
+  }
+  .About .about-text h2 {
+    font-size: 25px;
+    color: #BBE1FA;
+    padding-left: 5px;
+  }
+  .About .about-text p {
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 0px;
+  }
+  .About .about-text .rectangle2 {
+    display: block;
+    background-color: #0F0F0F;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    right: -25%;
+    top: 50%;
+    display: none;
+  }
+  .About .about-text .about-btn {
+    margin: 10px;
+    background-color: #0F4C75;
+    width: 200px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .How-it-works {
+    background-color: black;
+    padding-top: 50px;
+  }
+  .How-it-works .text {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding-bottom: 10px;
+  }
+  .How-it-works .works1 {
+    background-color: #0F0F0F;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .How-it-works .works1 h2 {
+    font-size: 30px;
+    color: #3282B8;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .How-it-works .works1 p {
+    font-size: 25px;
+    color: white;
+    padding-right: 20px;
+  }
+  .How-it-works .works2 {
+    background-color: #0F0F0F;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .How-it-works .works2 h2 {
+    font-size: 30px;
+    color: #BBE1FA;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .How-it-works .works2 p {
+    font-size: 25px;
+    color: white;
+    padding-right: 20px;
+  }
+  .showcase {
+    background-color: black;
+  }
+  .showcase h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-top: 50px;
+  }
+  .showcase .clients {
+    text-align: center;
+    display: block;
+  }
+  .showcase .clients button {
+    background-color: black;
+    border: none;
+    outline: none;
+  }
+  .showcase #profile1 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile1 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile1 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile1 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile1 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile1 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile1 p {
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile2 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile2 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile2 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile2 .exe-text h3 {
+    font-size: 25px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 10px;
+    color: #BBE1FA;
+  }
+  .showcase #profile2 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile2 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile2 p {
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile3 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile3 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile3 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile3 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile3 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile3 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile3 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile4 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile4 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile4 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile4 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile4 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile4 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile4 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile5 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile5 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile5 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile5 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile5 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile5 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile5 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile6 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile6 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile6 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile6 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile6 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile6 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile6 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile7 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile7 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile7 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile7 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile7 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile7 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile7 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile8 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile8 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile8 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile8 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile8 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile8 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile8 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile9 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile9 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile9 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile9 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile9 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile9 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile9 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile10 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile10 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile10 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile10 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile10 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile10 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile10 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile11 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile11 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile11 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile11 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile11 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile11 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile11 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .Contact-us {
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .Contact-us .contact h3 {
+    font-size: 28px;
+    color: #BBE1FA;
+  }
+  .Contact-us .contact h2 {
+    font-size: 40px;
+    color: white;
+  }
+  .Contact-us .contact p {
+    font-size: 25px;
+    color: #BBE1FA;
+  }
+  .Contact-us .contact .phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 50px;
+  }
+  .Contact-us .contact .phone i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .contact .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .Contact-us .contact .email i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .contact .linkedin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .Contact-us .contact .linkedin i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .fill {
+    background-color: #0F0F0F;
+    padding: 40px 40px 40px 40px;
+  }
+  .Contact-us .fill form #name {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #name::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #email::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #subject::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    font-size: 25px;
+  }
+  .Contact-us .fill form #message::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form .form-btn {
+    width: 100%;
+    background-color: #0F4C75;
+    height: 60px;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .Mailing-list {
+    background-color: black;
+    padding-bottom: 200px;
+    position: relative;
+  }
+  .Mailing-list .list {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #0F0F0F;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .Mailing-list .list .mailing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .Mailing-list .list .mailing .circle {
+    background-color: #3282B8;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .Mailing-list .list .mailing i {
+    position: absolue;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    font-size: 30px;
+  }
+  .Mailing-list .list .mailing p {
+    color: white;
+    font-size: 25px;
+    padding-left: 10px;
+  }
+  .Mailing-list .list .mailing p span {
+    display: block;
+  }
+  .Mailing-list .list .subscribe form #Your-email {
+    width: 100%;
+    height: 80px;
+    background-color: #2B2B2B;
+    position: relative;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .Mailing-list .list .subscribe form #sub-btn {
+    width: 40%;
+    background-color: #0F4C75;
+    height: 65px;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 7%;
+  }
+  footer {
+    background-color: #171717;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  footer .list {
+    position: absolute;
+    background-color: #0F0F0F;
+    margin-right: 40px;
+    margin-left: 20px;
+    padding-top: 10px;
+    top: -15%;
+    width: 95%;
+  }
+  footer .list p {
+    font-size: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 10px;
+  }
+  footer .list #old-mutual {
+    width: 80%;
+    padding-top: 45px;
+  }
+  footer .list #old-mutual img {
+    width: 100%;
+  }
+  footer .list #toyota {
+    width: 80%;
+  }
+  footer .list #toyota img {
+    width: 100%;
+  }
+  footer .list #nestle {
+    width: 80%;
+  }
+  footer .list #nestle img {
+    width: 100%;
+  }
+  footer .list #cell {
+    width: 80%;
+  }
+  footer .list #cell img {
+    width: 100%;
+  }
+  footer .contacts h2 {
+    padding-top: 200px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 40px;
+  }
+  footer .contacts .links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer .contacts .links ul li {
+    width: 20%;
+  }
+  footer .contacts .links ul li a {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    padding-left: 3px;
+  }
+  footer .contacts .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 25px;
+    padding-top: 90px;
+    color: white;
+  }
+  footer .contacts .details #number {
+    position: relative;
+  }
+  footer .contacts .details #number:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 80px;
+    background-color: grey;
+    right: -10%;
+    top: -50%;
+  }
+  footer .contacts .details #help {
+    position: relative;
+  }
+  footer .contacts .details #help:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 80px;
+    background-color: grey;
+    right: -10%;
+    top: -50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  header {
+    background-color: black;
+    height: 10vh;
+  }
+  header .logo {
+    margin-left: 60px;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header ul li {
+    padding-top: 10px;
+  }
+  header ul li a {
+    margin-left: 20px;
+    color: white;
+    font-size: 25px;
+  }
+  header .header-btn {
+    margin: 10px;
+    background-color: #0F4C75;
+    width: 200px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .banner {
+    height: 90vh;
+  }
+  .banner .banner-text {
+    color: white;
+    margin-top: 200px;
+  }
+  .banner .banner-text .banner-btn {
+    margin: 10px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+  }
+  .banner .banner-images {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner .banner-images img {
+    width: 40%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .About {
+    background-color: black;
+  }
+  .About .about-image {
+    padding-top: 100px;
+    width: 75%;
+    position: relative;
+  }
+  .About .about-image img {
+    width: 100%;
+  }
+  .About .rectangle {
+    display: block;
+    background-color: #0F0F0F;
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    left: 75%;
+    top: 45%;
+  }
+  .About .about-text {
+    padding-top: 250px;
+    width: 80%;
+    position: relative;
+    color: white;
+  }
+  .About .about-text h2 {
+    font-size: 40px;
+    color: #BBE1FA;
+  }
+  .About .about-text p {
+    font-size: 25px;
+    color: white;
+    padding-bottom: 20px;
+  }
+  .About .about-text .rectangle2 {
+    background-color: #0F0F0F;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    right: -25%;
+    top: 45%;
+  }
+  .About .about-text .about-btn {
+    margin: 10px;
+    background-color: #0F4C75;
+    width: 200px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .How-it-works {
+    background-color: black;
+    padding-top: 250px;
+  }
+  .How-it-works .text {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    padding-bottom: 20px;
+  }
+  .How-it-works .works1 {
+    background-color: #0F0F0F;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .How-it-works .works1 h2 {
+    font-size: 30px;
+    color: #3282B8;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .How-it-works .works1 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+    padding-right: 20px;
+  }
+  .How-it-works .works2 {
+    background-color: #0F0F0F;
+    padding-left: 50px;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .How-it-works .works2 h2 {
+    font-size: 30px;
+    color: #BBE1FA;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .How-it-works .works2 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+    padding-right: 20px;
+    text-align: left;
+  }
+  .showcase {
+    background-color: black;
+  }
+  .showcase h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding-top: 200px;
+  }
+  .showcase .clients {
+    text-align: center;
+    display: block;
+  }
+  .showcase .clients button {
+    background-color: black;
+    border: none;
+    outline: none;
+  }
+  .showcase #profile1 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile1 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile1 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile1 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile1 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile1 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile1 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile2 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile2 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile2 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile2 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile2 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile2 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile2 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile3 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile3 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile3 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile3 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile3 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile3 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile3 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile4 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile4 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile4 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile4 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile4 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile4 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile4 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile5 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile5 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile5 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile5 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile5 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile5 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile5 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile6 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile6 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile6 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile6 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile6 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile6 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile6 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile7 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile7 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile7 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile7 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile7 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile7 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile7 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile8 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile8 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile8 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile8 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile8 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile8 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile8 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile9 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile9 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile9 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile9 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile9 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile9 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile9 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile10 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile10 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile10 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile10 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile10 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile10 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile10 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .showcase #profile11 .image {
+    padding-top: 30px;
+  }
+  .showcase #profile11 .image img {
+    width: 95%;
+    height: 95%;
+  }
+  .showcase #profile11 .exe-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase #profile11 .exe-text h3 {
+    white-space: pre-line;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 40px;
+    padding-right: 100px;
+    color: #BBE1FA;
+  }
+  .showcase #profile11 .exe-text .cellc {
+    width: 25%;
+    height: 25%;
+  }
+  .showcase #profile11 .exe-text .cellc img {
+    width: 100%;
+    height: 100%;
+  }
+  .showcase #profile11 p {
+    white-space: pre-line;
+    font-size: 25px;
+    color: white;
+  }
+  .Contact-us {
+    background-color: black;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .Contact-us .contact h3 {
+    font-size: 28px;
+    color: #BBE1FA;
+  }
+  .Contact-us .contact h2 {
+    font-size: 40px;
+    color: white;
+  }
+  .Contact-us .contact p {
+    font-size: 25px;
+    color: #BBE1FA;
+  }
+  .Contact-us .contact .phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 30px;
+    padding-top: 50px;
+  }
+  .Contact-us .contact .phone i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .contact .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  .Contact-us .contact .email i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .contact .linkedin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  .Contact-us .contact .linkedin i {
+    color: #BBE1FA;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  .Contact-us .fill {
+    background-color: #0F0F0F;
+    padding: 40px 40px 40px 40px;
+  }
+  .Contact-us .fill form #name {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+  }
+  .Contact-us .fill form #name::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #name::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+  }
+  .Contact-us .fill form #email::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #email::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+  }
+  .Contact-us .fill form #subject::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #subject::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+  }
+  .Contact-us .fill form #message::-webkit-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message:-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message::-ms-input-placeholder {
+    color: white;
+  }
+  .Contact-us .fill form #message::placeholder {
+    color: white;
+  }
+  .Contact-us .fill form .form-btn {
+    width: 100%;
+    background-color: #0F4C75;
+    height: 60px;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  .Mailing-list {
+    background-color: black;
+    padding-bottom: 200px;
+    position: relative;
+  }
+  .Mailing-list .list {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #0F0F0F;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .Mailing-list .list .mailing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .Mailing-list .list .mailing .circle {
+    background-color: #3282B8;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .Mailing-list .list .mailing i {
+    position: absolue;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-size: 30px;
+  }
+  .Mailing-list .list .mailing p {
+    color: white;
+    font-size: 30px;
+    padding-left: 10px;
+  }
+  .Mailing-list .list .mailing p span {
+    display: block;
+  }
+  .Mailing-list .list .subscribe form #Your-email {
+    width: 100%;
+    height: 80px;
+    background-color: #2B2B2B;
+    position: relative;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .Mailing-list .list .subscribe form #sub-btn {
+    width: 30%;
+    background-color: #0F4C75;
+    height: 65px;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 67%;
+    top: 7%;
+  }
+  footer {
+    background-color: #171717;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  footer .list {
+    position: absolute;
+    background-color: #0F0F0F;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 50px;
+    top: -15%;
+    width: 95%;
+  }
+  footer .list p {
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 20px;
+  }
+  footer .list #old-mutual {
+    width: 80%;
+    padding-top: 50px;
+  }
+  footer .list #old-mutual img {
+    width: 100%;
+  }
+  footer .list #toyota {
+    width: 60%;
+  }
+  footer .list #toyota img {
+    width: 100%;
+  }
+  footer .list #nestle {
+    width: 60%;
+  }
+  footer .list #nestle img {
+    width: 100%;
+  }
+  footer .list #cell {
+    width: 60%;
+  }
+  footer .list #cell img {
+    width: 100%;
+  }
+  footer .contacts h2 {
+    padding-top: 250px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 40px;
+  }
+  footer .contacts .links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer .contacts .links ul li {
+    width: 20%;
+  }
+  footer .contacts .links ul li a {
+    font-size: 20px;
+    color: white;
+    position: relative;
+  }
+  footer .contacts .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 25px;
+    padding-top: 90px;
+    color: white;
+  }
+  footer .contacts .details #number {
+    position: relative;
+  }
+  footer .contacts .details #number:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 80px;
+    background-color: grey;
+    right: -50%;
+    top: -50%;
+  }
+  footer .contacts .details #help {
+    position: relative;
+  }
+  footer .contacts .details #help:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 80px;
+    background-color: grey;
+    right: -50%;
+    top: -50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
